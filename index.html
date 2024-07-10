@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Search</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-container_input" placeholder="Search for books">
+            <button id="search-button" class="search-container_button">Search</button>
+        </div>
+        <div class="sort-container">
+            <select id="sort-options" class="sort-container_select">
+                <option value="author">Sort by Author</option>
+                <option value="title">Sort by Title</option>
+                <option value="genre">Sort by Genre</option>
+            </select>
+        </div>
+        <div id="book-list" class="book-list"></div>
+        <div id="no-results" class="no-results" style="display: none;">No results found</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

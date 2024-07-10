@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-container, .sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-container_input, .sort-container_select {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-container_button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.search-container_button:hover {
+    background-color: #0056b3;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+}
+
+.book-item_title {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.book-item_author, .book-item_genre {
+    margin: 10px 0;
+    color: #666;
+}
+
+.book-item_highlight {
+    font-weight: bold;
+    color: #e63946;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #e63946;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .book-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item {
+        width: calc(100% - 40px);
+    }
+
+    .search-container_input, .sort-container_select {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-container, .sort-container {
+        flex-direction: column;
+    }
+
+    .search-container_button {
+        width: 100%;
+    }
+}
