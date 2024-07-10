@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     function highlightMatch(text, query) {
         if (!query) return text;
         const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<span class="book-item__highlight">$1</span>');
+        return text.replace(regex, '<span class="book-item_highlight">$1</span>');
     }
 
     function sortBooks(books, criterion) {
